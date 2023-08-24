@@ -55,6 +55,8 @@ app.post("/api/logs", async (req, res) => {
 
 app.listen(port, async () => {
   try {
+    // zenerate-app-log는 DB명
+    // mongoDB는 default로 별도 user, root PW 없이 root 접속
     // test는 싱글 커넥션
     mongoose.connect("mongodb://localhost:27017/zenerate-app-log");
 
